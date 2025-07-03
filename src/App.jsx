@@ -1,6 +1,7 @@
 import { useState } from "react";
 import GameBoard from "./game/GameBoard";
 import HomePage from "./homescreen/HomePage";
+import GameProvider from "./game/GameContext";
 
 export default function App() {
   const [gameStart, setGameStart] = useState(false);
@@ -10,7 +11,9 @@ export default function App() {
   // Display game page after clicking start
   return (
     <main>
-      <GameBoard size={3} />
+      <GameProvider>
+        <GameBoard size={3} />
+      </GameProvider>
     </main>
   );
 }
