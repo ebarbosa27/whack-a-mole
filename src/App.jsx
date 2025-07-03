@@ -2,6 +2,7 @@ import { useState } from "react";
 import GameBoard from "./game/GameBoard";
 import HomePage from "./homescreen/HomePage";
 import GameProvider from "./game/GameContext";
+import "./app.css";
 
 export default function App() {
   const [gameStart, setGameStart] = useState(false);
