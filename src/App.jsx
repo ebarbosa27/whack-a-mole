@@ -1,4 +1,5 @@
 import { useState } from "react";
+import GameBoard from "./GameBoard";
 
 export default function App() {
   const [gameStart, setGameStart] = useState(false);
@@ -13,5 +14,9 @@ export default function App() {
     );
   }
   // Display game page after clicking start
-  return <></>;
+  return (
+    <main>
+      <GameBoard size={3} />
+    </main>
+  );
 }
