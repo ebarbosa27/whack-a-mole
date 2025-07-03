@@ -1,4 +1,19 @@
-.gameboard {
+.gamePage {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.gameOptions {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  height: 200px;
+}
+
+.gameBoard {
+  flex: 1;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -6,9 +21,6 @@
 
   margin: 0;
   padding: 0;
-
-  width: 100%;
-  height: 100%;
 }
 
 .holeItem {
@@ -25,4 +37,5 @@
 .holeItem img {
   margin: 0;
   padding: 0;
+  width: 50%;
 }

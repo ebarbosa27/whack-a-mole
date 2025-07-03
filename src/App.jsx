@@ -1,5 +1,5 @@
 import { useState } from "react";
-import GameBoard from "./game/GameBoard";
+import GamePage from "./game/GamePage";
 import HomePage from "./homescreen/HomePage";
 import GameProvider from "./game/GameContext";
 import "./app.css";
@@ -13,7 +13,7 @@ export default function App() {
   return (
     <main>
       <GameProvider>
-        <GameBoard size={3} />
+        <GamePage />
       </GameProvider>
     </main>
   );
