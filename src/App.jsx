@@ -1,5 +1,5 @@
 import { useState } from "react";
-import GameBoard from "./GameBoard";
+import GameBoard from "./game/GameBoard";
 import HomePage from "./homescreen/HomePage";
 
 export default function App() {
