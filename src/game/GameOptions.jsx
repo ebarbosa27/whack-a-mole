@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { GameContext } from "./GameContext";
 
 export default function GameOptions() {
@@ -8,6 +8,7 @@ export default function GameOptions() {
     <div className="gameOptions">
       <button onClick={() => game.decreaseGameSize()}>decrease </button>
       <button onClick={() => game.increaseGameSize()}>increase</button>
+      <div>score: {game.gameScore}</div>
     </div>
   );
 }

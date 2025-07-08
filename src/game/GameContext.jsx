@@ -7,17 +7,15 @@ export default function GameProvider({ children }) {
   const [gameSize, setGameSize] = useState(3);
 
   function increaseScore() {
-    setGameScore((prev) => prev++);
+    setGameScore((prev) => ++prev);
   }
 
   function increaseGameSize() {
-    setGameSize((prev) => prev + 1);
-    console.log(gameSize);
+    setGameSize((prev) => ++prev);
   }
 
   function decreaseGameSize() {
-    setGameSize((prev) => prev - 1);
-    console.log(gameSize);
+    setGameSize((prev) => --prev);
   }
 
   return (
