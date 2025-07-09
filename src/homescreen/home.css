@@ -3,6 +3,12 @@
   flex-direction: column;
   justify-content: center;
   font-size: 36px;
+  width: 90%;
+}
+
+.homepage p {
+  font-size: 24px;
+  width: 90%;
 }
 
 .homepage button {
