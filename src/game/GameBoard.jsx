@@ -13,24 +13,29 @@ export default function GameBoard() {
     }
   }
 
+  function createMole(_, idx) {
+    let holeSrc = "hole";
+    if (idx === game.moleLocation) {
+      holeSrc = "mole";
+    }
+    return (
+      <div
+        key={idx}
+        className={`holeItem ${holeSrc}`}
+        onClick={() => checkForMole(idx === game.moleLocation)}
+      />
+    );
+  }
+
   return (
-    <div className="gameBoard">
-      {gameMap.map((_, idx) => {
-        let holeSrc = "hole.png";
-        if (idx === game.moleLocation) {
-          holeSrc = "mole.png";
-        }
-        return (
-          <div
-            key={idx}
-            className="holeItem"
-            style={{ flexBasis: `${Math.round((1 / size) * 100)}%` }}
-            onClick={() => checkForMole(idx === game.moleLocation)}
-          >
-            <img src={holeSrc} />
-          </div>
-        );
-      })}
+    <div
+      className="gameBoard"
+      style={{
+        gridTemplateColumns: `repeat(${size}, minmax(50px, 1fr))`,
+        gridTemplateRows: `repeat(${size}, minmax(50px, 1fr))`,
+      }}
+    >
+      {gameMap.map(createMole)}
     </div>
   );
 }

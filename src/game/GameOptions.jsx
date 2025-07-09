@@ -16,13 +16,26 @@ export default function GameOptions() {
       );
     }
 
+    const disableDecreaseButton = game.gameSize === 2;
+    const disableIncreaseButton = game.gameSize === 5;
+
     return (
       <>
         <button onClick={() => game.startGame()}>start</button>
         <div>
           <p>Board Size: </p>
-          <button onClick={() => game.decreaseGameSize()}>decrease </button>
-          <button onClick={() => game.increaseGameSize()}>increase</button>
+          <button
+            className={disableDecreaseButton ? "disableButton" : undefined}
+            onClick={() => game.decreaseGameSize()}
+          >
+            decrease{" "}
+          </button>
+          <button
+            className={disableIncreaseButton ? "disableButton" : undefined}
+            onClick={() => game.increaseGameSize()}
+          >
+            increase
+          </button>
         </div>
       </>
     );
