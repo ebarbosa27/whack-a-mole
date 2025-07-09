@@ -9,7 +9,6 @@ export default function GameOptions() {
       return (
         <>
           <div className="gameButtons">
-            <button onClick={() => game.stopGame()}>stop</button>
             <button onClick={() => game.restartGame()}>restart</button>
           </div>
         </>

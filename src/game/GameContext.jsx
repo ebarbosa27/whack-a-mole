@@ -26,15 +26,9 @@ export default function GameProvider({ children }) {
     newMoleLocation();
   }
 
-  function stopGame() {
+  function restartGame() {
     setGameStatus("stopped");
     setMoleLocation(-1);
-  }
-
-  function restartGame() {
-    setGameStatus("ongoing");
-    setGameScore(0);
-    newMoleLocation();
   }
 
   function newMoleLocation() {
@@ -50,7 +44,6 @@ export default function GameProvider({ children }) {
         increaseGameSize,
         decreaseGameSize,
         gameStatus,
-        stopGame,
         startGame,
         restartGame,
         moleLocation,
