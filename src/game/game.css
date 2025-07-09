@@ -10,6 +10,7 @@
   justify-content: center;
   align-items: end;
   height: 200px;
+  gap: 1rem;
 }
 
 .gameBoard {
