@@ -5,6 +5,7 @@ export default function GameBoard() {
   const game = useContext(GameContext);
   const size = game.gameSize;
   const gameMap = [...Array(size ** 2)];
+  const gameStopped = game.gameStatus === "stopped";
 
   function checkForMole(isMole) {
     if (isMole) {
@@ -29,7 +30,7 @@ export default function GameBoard() {
 
   return (
     <div
-      className="gameBoard"
+      className={gameStopped ? "gameBoard gamePaused" : "gameBoard"}
       style={{
         gridTemplateColumns: `repeat(${size}, minmax(50px, 1fr))`,
         gridTemplateRows: `repeat(${size}, minmax(50px, 1fr))`,

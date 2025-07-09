@@ -32,7 +32,11 @@ export default function GameProvider({ children }) {
   }
 
   function newMoleLocation() {
-    setMoleLocation(Math.floor(Math.random() * gameSize ** 2));
+    let newMoleLocation;
+    while (newMoleLocation === undefined || moleLocation === newMoleLocation) {
+      newMoleLocation = Math.floor(Math.random() * gameSize ** 2);
+    }
+    setMoleLocation(newMoleLocation);
   }
 
   return (
